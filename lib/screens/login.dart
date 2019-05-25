@@ -35,16 +35,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Expanded(
-          flex: 1,
-          child: TabbarWidget(
-            header: this.headerTabWidget,
-            body: this.children,
-          ),
-        ),
-      ],
+    return TabbarWidget(
+      header: this.headerTabWidget,
+      body: this.children,
     );
   }
 }

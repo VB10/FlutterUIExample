@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:oneframe/widgets/segment_page.dart';
 import 'package:oneframe/widgets/tab/header_tab.dart';
+import 'package:oneframe/widgets/tab/tabbar.dart';
 
 import 'home/main.dart';
 
@@ -39,10 +39,9 @@ class _LoginScreenState extends State<LoginScreen> {
       children: <Widget>[
         Expanded(
           flex: 1,
-          child: SegmentPageWidgets(
-            controller: this.controller,
-            headerChildren: this.headerTabWidget,
-            children: this.children,
+          child: TabbarWidget(
+            header: this.headerTabWidget,
+            body: this.children,
           ),
         ),
       ],

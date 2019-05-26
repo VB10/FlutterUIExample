@@ -12,11 +12,9 @@ class FeedPage extends StatefulWidget {
 
 class _FeedPageState extends State<FeedPage> {
   List<String> _datas;
-  ScrollController _controller;
   double screenWidth;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     //Example
@@ -50,13 +48,32 @@ class _FeedPageState extends State<FeedPage> {
                           ? Text(this._title)
                           : Container(
                               alignment: Alignment.bottomLeft,
-                              padding: EdgeInsets.only(left: WindowHelper.SLIVER_LEFT_PADDING),
+                              padding: EdgeInsets.only(
+                                  left: WindowHelper.SLIVER_LEFT_PADDING),
                               child: Text(this._title))),
                   background: Image.network(
                     "https://images.unsplash.com/photo-1542601098-3adb3baeb1ec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5bb9a9747954cdd6eabe54e3688a407e&auto=format&fit=crop&w=500&q=60",
                     fit: BoxFit.cover,
                   ));
             },
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Container(
+            margin: EdgeInsets.symmetric(vertical: 20.0),
+            height: 200.0,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Container(
+                  width: 200.0,
+                  child: Card(
+                    child: Text('data'),
+                  ),
+                );
+              },
+            ),
           ),
         ),
         SliverFixedExtentList(

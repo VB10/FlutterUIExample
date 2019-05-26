@@ -10,5 +10,5 @@ class WindowHelper {
     return _appBarHeight;
   }
 
-  static double SLIVER_LEFT_PADDING = 76;
+  static const double SLIVER_LEFT_PADDING = 76;
 }

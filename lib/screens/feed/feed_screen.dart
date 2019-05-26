@@ -3,6 +3,8 @@ import 'package:flutter/rendering.dart';
 import 'package:oneframe/shared/views/window.dart';
 import 'package:oneframe/widgets/card/list_card.dart';
 
+import 'detail_screen.dart';
+
 class FeedPage extends StatefulWidget {
   const FeedPage({Key key}) : super(key: key);
 
@@ -68,8 +70,17 @@ class _FeedPageState extends State<FeedPage> {
               itemBuilder: (context, index) {
                 return Container(
                   width: 200.0,
-                  child: Card(
-                    child: Text('data'),
+                  child: Hero(
+                    transitionOnUserGestures: false,
+                    tag: "heros${index}",
+                    child: Card(
+                      child: FlatButton(
+                          onPressed: () {
+                            print(index);
+                            Navigator.pushNamed(context, "/second");
+                          },
+                          child: Text('data')),
+                    ),
                   ),
                 );
               },

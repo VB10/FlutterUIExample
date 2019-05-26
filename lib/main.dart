@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oneframe/screens/feed/detail_screen.dart';
 import 'package:oneframe/screens/feed/feed_screen.dart';
 import 'package:oneframe/screens/login.dart';
 
@@ -9,8 +10,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Segment Demo',
+      initialRoute: '/',
+      routes: {
+        // When we navigate to the "/" route, build the FirstScreen Widget
+        '/': (context) => FeedPage(),
+        // When we navigate to the "/second" route, build the SecondScreen Widget
+        '/second': (context) => Material(
+          child: FeedDetailScreen(),
+        ),
+      },
       debugShowCheckedModeBanner: false,
-      home: Material(child: FeedPage()),
     );
   }
 }

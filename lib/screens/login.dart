@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oneframe/widgets/tab/header_tab.dart';
-import 'package:oneframe/widgets/tab/tabbar.dart';
+import 'package:oneframe/shared/widgets/tab/header_tab.dart';
+import 'package:oneframe/shared/widgets/tab/tabbar.dart';
+
 
 import 'home/main.dart';
 

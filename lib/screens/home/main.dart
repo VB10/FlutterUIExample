@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:oneframe/styles/colors/main.dart';
-import 'package:oneframe/styles/input/main.dart';
-import 'package:oneframe/styles/text/main.dart';
-import 'package:oneframe/widgets/button/raised_button.dart';
+import 'package:oneframe/shared/styles/colors/main.dart';
+import 'package:oneframe/shared/styles/input/main.dart';
+import 'package:oneframe/shared/styles/text/main.dart';
+import 'package:oneframe/shared/widgets/button/raised_button.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);

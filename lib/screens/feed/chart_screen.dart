@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oneframe/shared/widgets/form/text_input.dart';
 import 'package:pie_chart/pie_chart.dart';
 
 class ChartScreen extends StatefulWidget {
@@ -10,6 +11,7 @@ class ChartScreen extends StatefulWidget {
 
 class _ChartScreenState extends State<ChartScreen> {
   Map<String, double> _dataMap = new Map();
+
   bool _toogle = false;
   @override
   void initState() {
@@ -44,7 +46,7 @@ class _ChartScreenState extends State<ChartScreen> {
                 showChartValues: true,
                 chartValuesColor: Colors.blueGrey[900].withOpacity(0.9),
               )
-            : Text("Change visible."),
+            : MyCustomForm(),
       ),
     );
   }

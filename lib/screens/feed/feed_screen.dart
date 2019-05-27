@@ -32,6 +32,7 @@ class _FeedPageState extends State<FeedPage> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add_photo_alternate),
         onPressed: () => {
               showModalBottomSheet(
                   context: context,

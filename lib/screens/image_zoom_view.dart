@@ -23,7 +23,7 @@ class _ImageZoomViewState extends State<ImageZoomView> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => HeroPhotoViewWrapper(
-                            
+
                                 imageProvider: NetworkImage(
                                     "https://picsum.photos/id/1084/536/354?grayscale"),
                               ),

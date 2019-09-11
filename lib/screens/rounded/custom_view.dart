@@ -17,8 +17,10 @@ class _CustomView1State extends State<CustomView1> {
             flex: 6,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.elliptical(350, 150),
-                  bottomRight: Radius.elliptical(350, 150)),
+                  bottomLeft: Radius.elliptical(ScreenUtil.screenWidth / 2,
+                      ScreenUtil.instance.setHeight(400)),
+                  bottomRight: Radius.elliptical(ScreenUtil.screenWidth / 2,
+                      ScreenUtil.instance.setHeight(400))),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.red,

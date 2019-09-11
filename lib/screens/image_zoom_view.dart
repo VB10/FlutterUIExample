@@ -1,4 +1,3 @@
-import 'package:extended_image/extended_image.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 
@@ -23,7 +22,6 @@ class _ImageZoomViewState extends State<ImageZoomView> {
                         context,
                         MaterialPageRoute(
                           builder: (context) => HeroPhotoViewWrapper(
-
                                 imageProvider: NetworkImage(
                                     "https://picsum.photos/id/1084/536/354?grayscale"),
                               ),
@@ -39,12 +37,13 @@ class _ImageZoomViewState extends State<ImageZoomView> {
           RaisedButton(
             onPressed: () {
               showDialog(
-                  context: context,
-                  barrierDismissible: true,
-                  builder: (context) => PhotoView(
-                        imageProvider: NetworkImage(
-                            "https://picsum.photos/id/1084/536/354?grayscale"),
-                      ));
+                context: context,
+                barrierDismissible: true,
+                builder: (context) => PhotoView(
+                      imageProvider: NetworkImage(
+                          "https://picsum.photos/id/1084/536/354?grayscale"),
+                    ),
+              );
             },
             child: Text("Get Photo "),
           )

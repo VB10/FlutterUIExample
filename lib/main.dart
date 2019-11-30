@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:oneframe/screens/feed/chart_screen.dart';
-import 'package:oneframe/screens/feed/detail_screen.dart';
-import 'package:oneframe/screens/feed/feed_screen.dart';
-import 'package:oneframe/screens/image_zoom_view.dart';
-import 'package:oneframe/screens/login.dart';
-import 'package:oneframe/screens/rounded/custom_view.dart';
 import 'package:video_player/video_player.dart';
 
-import 'screens/video/video_view.dart';
+import 'screens/login/login_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,15 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Segment Demo',
-      routes: {
-        // When we navigate ImageZoomView the "/" route, build the FirstScreen Widget
-        '/': (context) => CustomView1(),
-        '/chart': (context) => ChartScreen(),
-        // When we navigate to the "/second" route, build the SecondScreen Widget
-        '/second': (context) => Material(
-              child: FeedDetailScreen(),
-            ),
-      },
+      theme: ThemeData.light().copyWith(
+        textTheme: TextTheme(
+          display1: TextStyle(fontSize: 35,color: Colors.white)
+        )
+      ),
+      home: LoginView(),
       debugShowCheckedModeBanner: false,
     );
   }
